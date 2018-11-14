@@ -1,0 +1,5 @@
+site_name: INDUS Starter Site
+age_verification:
+    - title: Age Verification
+    - text: To visit this site you must confirm that you are 21+ years old.
+    - button: Confirm

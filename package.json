@@ -1,0 +1,32 @@
+{
+  "scripts": {
+    "start": "node index",
+    "build": "metalsmith build",
+    "prod": "gulp",
+    "deploy": "rsync -r -v -e 'ssh -l deploy' --delete --no-perms ./build/ 111.111.1111.11:/var/www/sitename.com/html/"
+  },
+  "name": "indus-scaffold",
+  "version": "1.0.0",
+  "description": "scaffold for a new INDUS site",
+  "main": "index.js",
+  "author": "Peter Nochisaki",
+  "license": "MIT",
+  "dependencies": {
+    "browser-sync": "^2.26.3",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.4.0",
+    "gulp-postcss": "^8.0.0",
+    "jstransformer-handlebars": "^1.1.0",
+    "metalsmith": "^2.3.0",
+    "metalsmith-discover-partials": "^0.1.2",
+    "metalsmith-include": "^0.0.2",
+    "metalsmith-layouts": "^2.3.0",
+    "metalsmith-markdown": "^1.1.0",
+    "metalsmith-metadata": "^0.0.4",
+    "metalsmith-permalinks": "^2.0.0",
+    "metalsmith-serve": "^0.0.7",
+    "metalsmith-watch": "^1.0.3",
+    "postcss-preset-env": "^6.4.0"
+  }
+}
