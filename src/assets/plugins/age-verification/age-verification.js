@@ -73,10 +73,15 @@ av_closeModal = function() {
 av_positionPrompt = function() {
   var top = ($(window).outerHeight() - $('#modal_content').outerHeight()) / 2;
   var left = ($(window).outerWidth() - $('#modal_content').outerWidth()) / 2;
-  modal_content.css({
-    'top': top,
-    'left': left
-  });
+  if (yourvar === null) {
+
+  } else {
+    modal_content.css({
+      'top': top,
+      'left': left
+    });
+  }
+
 
   if (modal_content.is(':hidden') && ($.cookie('cc_legal') != "yes")) {
     modal_content.fadeIn('slow')
