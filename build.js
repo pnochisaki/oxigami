@@ -4,8 +4,8 @@ const metadata = require('metalsmith-metadata');
 const layouts = require('metalsmith-layouts');
 const permalinks = require('metalsmith-permalinks');
 const discoverpartials = require('metalsmith-discover-partials');
+const helpers       = require('handlebars-helpers')();
 
-const serverport = 5000;
 
 metalsmith(__dirname)
   .destination('./build')
