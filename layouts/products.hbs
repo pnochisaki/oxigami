@@ -11,7 +11,8 @@
                 <div class="product-wrapper">
                     <div class="product">
                         <div class="border">
-                            <div class="image"><img src="{{ product.image }}" alt="{{ product.title }}"></div>
+                            {{!-- <div class="image"><img src="{{ product.image }}" alt="{{ product.title }}"></div> --}}
+                            <div class="image"><img src="https://placekitten.com/200/200" alt="{{ product.title }}"></div>
                             <div class="title">{{ product.title }}</div>
                             <div class="strain-type">
                                 <div><span>Strain Type:</span> {{ product.strain-type }}</div>
@@ -34,5 +35,5 @@
             </div>
         </div>
         {{/each}}
-        
+
 {{> footer}}
