@@ -17,6 +17,7 @@
     "gulp": "^3.9.1",
     "gulp-clean": "^0.4.0",
     "gulp-postcss": "^8.0.0",
+    "handlebars-helpers": "^0.10.0",
     "jstransformer-handlebars": "^1.1.0",
     "metalsmith": "^2.3.0",
     "metalsmith-discover-partials": "^0.1.2",

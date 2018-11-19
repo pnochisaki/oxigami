@@ -1,3 +1,38 @@
 {{> header}}
 {{{contents}}}
+
+        {{#each config.groups}}
+        <div class="wrapper" id="{{group.title}}">
+            <h4>{{group.title}}</h4>
+            <div class="products col-33">
+                {{#each ../config.products}}
+                {{#inArray product.strain-type ../group.title}}
+
+                <div class="product-wrapper">
+                    <div class="product">
+                        <div class="border">
+                            <div class="image"><img src="{{ product.image }}" alt="{{ product.title }}"></div>
+                            <div class="title">{{ product.title }}</div>
+                            <div class="strain-type">
+                                <div><span>Strain Type:</span> {{ product.strain-type }}</div>
+                            </div>
+                            <div class="description">{{ product.description }}</div>
+                            <div class="additional-information">
+                                <span>Additional Information:</span>
+                                <p>{{ product.additional-info }}</p>
+                                <div class="stats">
+                                    <div class="thc">{{product.stat-thc}} THC</div>
+                                    <div class="cbd">{{product.stat-cbd}} CBD</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {{/inArray}}
+                {{/each}}
+            </div>
+        </div>
+        {{/each}}
+        
 {{> footer}}

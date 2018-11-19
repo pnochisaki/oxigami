@@ -1,0 +1,20 @@
+#body * {
+    display: inline-block;
+    margin: 1rem;
+    padding: 1rem;
+    border: .25rem solid #000;
+    background: #dedede;
+    color: #000;
+    box-sizing: border-box;
+}
+
+nav {
+    width: calc(100% - 2rem);
+    font-family: DDCHardware-Regular;
+}
+h1, h2, h3 {
+    font-family: ITCGaramondStd-BkIta;
+}
+p {
+    font-family: "Open Sans";
+}
