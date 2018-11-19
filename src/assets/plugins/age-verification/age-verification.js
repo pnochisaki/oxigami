@@ -3,27 +3,27 @@
  */
 
 var modal_content,
-modal_screen;
+  modal_screen;
 
 // Start Working ASAP.
-$(document).ready(function() {
+$(document).ready(function () {
   av_legality_check();
 });
 
 // Make sure the prompt stays in the middle.
-$( window ).resize(function() {
+$(window).resize(function () {
   av_positionPrompt();
 });
 
-av_legality_check = function() {
+av_legality_check = function () {
   if ($.cookie('cc_legal') == "yes") {
     // Do nothing
-    } else {
+  } else {
     av_showmodal();
   }
 };
 
-av_showmodal = function() {
+av_showmodal = function () {
   modal_screen = $('<div id="modal_screen"></div>');
   modal_content = $('<div id="modal_content" style="display:none"></div>');
   var modal_content_wrapper = $('<div id="modal_content_wrapper" class="content_wrapper"></div>');
@@ -47,7 +47,7 @@ av_showmodal = function() {
   modal_content.find('a.av_btn').on('click', av_setCookie);
 };
 
-av_setCookie = function(e) {
+av_setCookie = function (e) {
   e.preventDefault();
 
   var is_ca_legal = $(e.currentTarget).attr('rel');
@@ -65,15 +65,15 @@ av_setCookie = function(e) {
   }
 };
 
-av_closeModal = function() {
+av_closeModal = function () {
   modal_content.fadeOut();
   modal_screen.fadeOut();
 };
 
-av_positionPrompt = function() {
+av_positionPrompt = function () {
   var top = ($(window).outerHeight() - $('#modal_content').outerHeight()) / 2;
   var left = ($(window).outerWidth() - $('#modal_content').outerWidth()) / 2;
-  if (yourvar === null) {
+  if (modal_content.css === null) {
 
   } else {
     modal_content.css({
