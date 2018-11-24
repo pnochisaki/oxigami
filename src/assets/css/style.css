@@ -1,9 +1,12 @@
+* {
+    box-sizing: border-box;
+}
 html {
     font-size: 16px;
 }
 body {
     font-family: "PT Serif";
-    font-size: 2rem;
+    font-size: 1.5rem;
     line-height: 1.75;
 }
 header, footer {
@@ -16,6 +19,7 @@ img {
 .container {
     max-width: 55rem;
     margin: auto;
+    padding: 0 2rem;
 }
 a {
     color: #000;
@@ -33,7 +37,30 @@ input, textarea {
     display: block;
     padding: .25rem;
 }
+input[type='number'] {
+    display: inline-block;
+    width: 4rem;
+}
 
-footer {
-    padding: 4rem 0
+header, footer {
+    padding: 2rem 0
+}
+
+@media (min-width: 769px) {
+    .logo img {
+        width: 75%;
+    }
+   .product > div {
+        float: left;
+        width: 50%;
+        padding-right: 1rem;
+    }
+    .product:after {
+        content:" ";
+        display: block;
+        clear: both;
+    }
+    body {
+        font-size: 2rem;
+    }
 }

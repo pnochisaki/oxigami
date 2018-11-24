@@ -1,4 +1,22 @@
 {{> header}}
 <img src="/assets/img/oxigami.jpeg" />
 {{{contents}}}
+
+<script src="https://checkout.stripe.com/checkout.js"></script>
+
+
+<div class="product">
+  <div>
+    <img src="/assets/img/star-white.jpg" alt="">
+  </div>
+  <div>
+    <h3>How many Christmas stars would you like?</h3>
+    <input type="number" name="qty" value="1">
+    
+    <button id="customButton">Purchase for <span>$<span id="price"></span></span></button>
+  </div>
+</div>
+
+
+
 {{> footer}}
