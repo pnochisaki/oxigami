@@ -37,7 +37,9 @@ $(function () {
             handler.open({
                 name: 'Oxigami',
                 description: description,
-                amount: total
+                amount: total,
+                shippingAddress: true
+                
             });
             e.preventDefault();
         });
