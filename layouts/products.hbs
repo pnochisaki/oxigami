@@ -1,36 +1,36 @@
 {{> header}}
 {{{contents}}}
+<!-- Load Stripe.js on your website. -->
+<script src="https://js.stripe.com/v3"></script>
 
-<h2>Christmas Star</h2>
-$3.00
+<!-- Create a button that your customers click to complete their purchase. -->
+<button id="checkout-button">Pay</button>
+<div id="error-message"></div>
 
-<form action="#" id="product-1" method="POST">
-  <script
-    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-    data-key="pk_live_aqqrWSGqwzp5AH0IkoKypeb2"
-    data-amount="300"
-    data-name="Oxigami"
-    data-description="Christmas Star"
-    data-image="/assets/img/star.jpg"
-    data-locale="auto">
-  </script>
-</form>
+<script>
+  var stripe = Stripe('pk_live_aqqrWSGqwzp5AH0IkoKypeb2', {
+    betas: ['checkout_beta_3']
+  });
 
-<h2>Christmas Star (2-pack)</h2>
-
-$5.00
-<form action="#" id="product-2" method="POST">
-  <script
-    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-    data-key="pk_live_aqqrWSGqwzp5AH0IkoKypeb2"
-    data-amount="500"
-    data-name="Oxigami"
-    data-description="Christmas Star (2-pack)"
-    data-image="/assets/img/star.jpg"
-    data-locale="auto">
-  </script>
-</form>
-<hr>
+  var checkoutButton = document.getElementById('checkout-button');
+  checkoutButton.addEventListener('click', function () {
+    // When the customer clicks on the button, redirect
+    // them to Checkout.
+    stripe.redirectToCheckout({
+      items: [{sku: 'sku_E1wWYEGpd6smnI', quantity: 1}],
+      successUrl: 'https://pnochisaki.github.io//success',
+      cancelUrl: 'https://pnochisaki.github.io//canceled',
+    })
+    .then(function (result) {
+      if (result.error) {
+        // If `redirectToCheckout` fails due to a browser or network
+        // error, display the localized error message to your customer.
+        var displayError = document.getElementById('error-message');
+        displayError.textContent = result.error.message;
+      }
+    });
+  });
+</script>
 
 
 {{> footer}}
