@@ -6,7 +6,9 @@ body {
     font-size: 2rem;
     line-height: 1.75;
 }
-
+header, footer {
+    text-align: center;
+}
 img {
     width: 100%;
     height: auto;
@@ -21,7 +23,6 @@ a {
 }
 nav {
     padding: 2rem 0;
-    text-align: center;
 }
 nav a {
     display: inline-block;
