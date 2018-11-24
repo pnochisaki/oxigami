@@ -38,17 +38,22 @@ input, textarea {
     padding: .25rem;
 }
 input[type='number'] {
-    display: inline-block;
     width: 4rem;
+    margin: auto;
 }
 
 header, footer {
     padding: 2rem 0
 }
-
+.product {
+    text-align: center;
+}
 @media (min-width: 769px) {
     .logo img {
         width: 75%;
+    }
+    .product {
+        text-align: left;
     }
    .product > div {
         float: left;
@@ -59,6 +64,10 @@ header, footer {
         content:" ";
         display: block;
         clear: both;
+    }
+    input[type='number'] {
+        margin: 0;
+        display: inline-block;
     }
     body {
         font-size: 2rem;
