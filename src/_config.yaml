@@ -1,1 +1,10 @@
 site_name: Oxigami
+products: 
+  - product:
+      title: '1 Origami Christmas Star'
+      short_description: '1 Origami gift topper and ornament'
+      price: '3.00'
+  - product:
+      title: '2 Origami Christmas Stars'
+      short_description: '1 Origami gift topper and ornament'
+      price: '5.00'

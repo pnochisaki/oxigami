@@ -1,39 +1,35 @@
 {{> header}}
 {{{contents}}}
 
-        {{#each config.groups}}
-        <div class="wrapper" id="{{group.title}}">
-            <h4>{{group.title}}</h4>
-            <div class="products col-33">
-                {{#each ../config.products}}
-                {{#inArray product.strain-type ../group.title}}
+<h3>Christmas Star</h3>
+$3.00
+<form action="#" id="product-1" method="POST">
+  <script
+    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    data-key="pk_live_aqqrWSGqwzp5AH0IkoKypeb2"
+    data-amount="300"
+    data-name="Oxigami"
+    data-description="Christmas Star"
+    data-image="/assets/img/star.jpg"
+    data-locale="auto">
+  </script>
+</form>
 
-                <div class="product-wrapper">
-                    <div class="product">
-                        <div class="border">
-                            {{!-- <div class="image"><img src="{{ product.image }}" alt="{{ product.title }}"></div> --}}
-                            <div class="image"><img src="https://placekitten.com/200/200" alt="{{ product.title }}"></div>
-                            <div class="title">{{ product.title }}</div>
-                            <div class="strain-type">
-                                <div><span>Strain Type:</span> {{ product.strain-type }}</div>
-                            </div>
-                            <div class="description">{{ product.description }}</div>
-                            <div class="additional-information">
-                                <span>Additional Information:</span>
-                                <p>{{ product.additional-info }}</p>
-                                <div class="stats">
-                                    <div class="thc">{{product.stat-thc}} THC</div>
-                                    <div class="cbd">{{product.stat-cbd}} CBD</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<h3>Christmas Star (2-pack)</h3>
 
-                {{/inArray}}
-                {{/each}}
-            </div>
-        </div>
-        {{/each}}
+$5.00
+<form action="#" id="product-2" method="POST">
+  <script
+    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    data-key="pk_live_aqqrWSGqwzp5AH0IkoKypeb2"
+    data-amount="500"
+    data-name="Oxigami"
+    data-description="Christmas Star (2-pack)"
+    data-image="/assets/img/star.jpg"
+    data-locale="auto">
+  </script>
+</form>
+<hr>
+
 
 {{> footer}}
