@@ -10,10 +10,16 @@ $(function () {
             // Get the token ID to your server-side code for use.
         }
     });
+
     var description = "Vintage Origami Sheet Music Christmas Stars"
     var qty = 1
     var amount = 300
     var total = qty * amount
+    var hash = window.location.hash.substr(1);
+    
+    if (hash) {
+        qty = hash;
+    }
 
     $('#price').text(total/100);
     
@@ -22,7 +28,7 @@ $(function () {
 
         if (qty > 1) {
             amount = 250
-            description = qty + ' Christmas Stars'
+            description = qty + ' ' + description
         } else {
             amount = 300
         }
@@ -53,6 +59,7 @@ $(function () {
 
     });
 
+    $('input[type="number"]').val(qty);
     $('input[type="number"]').trigger("change");
 
 
