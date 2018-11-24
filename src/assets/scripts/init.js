@@ -24,39 +24,38 @@ $(function () {
     $('#price').text(total/100);
     
     $('input[type="number"]').on('change', function () {
-        var qty = $(this).val();
+        qty = $(this).val();
 
         if (qty > 1) {
             amount = 250
-            description = qty + ' ' + description
+            description_text = qty + ' ' + description
         } else {
             amount = 300
+            description_text = description
         }
 
-        howmany = qty;
         total = qty * amount;
+
         $('#price').text(total/100);
 
-        document.getElementById('customButton').addEventListener('click', function (e) {
+    });
 
-            // Open Checkout with further options:
-            handler.open({
-                name: 'Oxigami',
-                description: description,
-                amount: total,
-                shippingAddress: true
-                
-            });
-            e.preventDefault();
+    document.getElementById('customButton').addEventListener('click', function (e) {
+
+        // Open Checkout with further options:
+        handler.open({
+            name: 'Oxigami',
+            description: description_text,
+            amount: total,
+            shippingAddress: true
+            
         });
+        e.preventDefault();
+    });
 
-        // Close Checkout on page navigation:
-        window.addEventListener('popstate', function () {
-            handler.close();
-            howmany = 1;
-            $('#price').text(total/100);
-        });
-
+    // Close Checkout on page navigation:
+    window.addEventListener('popstate', function () {
+        handler.close();
     });
 
     $('input[type="number"]').val(qty);
