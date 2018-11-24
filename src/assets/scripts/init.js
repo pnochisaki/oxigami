@@ -11,7 +11,7 @@ $(function () {
         }
     });
 
-    var description = "Vintage Origami Sheet Music Christmas Stars"
+    var description = "Origami Christmas Stars"
     var qty = 1
     var amount = 300
     var total = qty * amount
