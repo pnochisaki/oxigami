@@ -5,16 +5,239 @@
 
 
 <div class="product">
-  <div>
-    <img src="/assets/img/star-white.jpg" alt="">
-  </div>
-  <div>
-    <h3>Origami Christmas stars</h3>
 
-    <button class="snipcart-add-item" data-item-id="1" data-item-name="Oxigami" data-item-price="3.00" data-item-weight="1"
-      data-item-description="Origami Christmas Star" data-item-url="/">
-      Buy Now</button>
-  </div>
+  <div id='product-component-d4fa4868588'></div>
+  <script type="text/javascript">
+    /*<![CDATA[*/
+
+    (function () {
+      var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+      if (window.ShopifyBuy) {
+        if (window.ShopifyBuy.UI) {
+          ShopifyBuyInit();
+        } else {
+          loadScript();
+        }
+      } else {
+        loadScript();
+      }
+
+      function loadScript() {
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = scriptURL;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+        script.onload = ShopifyBuyInit;
+      }
+
+      function ShopifyBuyInit() {
+        var client = ShopifyBuy.buildClient({
+          domain: 'nochisaki.myshopify.com',
+          storefrontAccessToken: 'f80b88269eee1dcd8cd9d9a6f78b276c',
+        });
+
+        ShopifyBuy.UI.onReady(client).then(function (ui) {
+          ui.createComponent('product', {
+            id: [1481327444032],
+            node: document.getElementById('product-component-d4fa4868588'),
+            moneyFormat: '%24%7B%7Bamount%7D%7D',
+            options: {
+              "product": {
+                "variantId": "all",
+                "width": "380px",
+                "contents": {
+                  "imgWithCarousel": false,
+                  "variantTitle": false,
+                  "description": false,
+                  "buttonWithQuantity": true,
+                  "button": false,
+                  "quantity": false
+                },
+                "text": {
+                  "button": "BUY NOW"
+                },
+                "styles": {
+                  "product": {
+                    "@media (min-width: 601px)": {
+                      "max-width": "100%",
+                      "margin-left": "0",
+                      "margin-bottom": "50px"
+                    }
+                  },
+                  "button": {
+                    "background-color": "#000000",
+                    "font-family": "PT Serif, serif",
+                    ":hover": {
+                      "background-color": "#000000"
+                    },
+                    "border-radius": "0px",
+                    ":focus": {
+                      "background-color": "#000000"
+                    },
+                    "font-weight": "normal"
+                  },
+                  "variantTitle": {
+                    "font-family": "PT Serif, serif",
+                    "font-weight": "normal"
+                  },
+                  "title": {
+                    "font-family": "PT Serif, serif"
+                  },
+                  "description": {
+                    "font-family": "PT Serif, serif",
+                    "font-weight": "normal"
+                  },
+                  "price": {
+                    "font-family": "PT Serif, serif",
+                    "font-weight": "normal"
+                  },
+                  "compareAt": {
+                    "font-size": "12px",
+                    "font-family": "PT Serif, serif",
+                    "font-weight": "normal"
+                  }
+                },
+                "googleFonts": [
+                  "PT Serif",
+                  "PT Serif",
+                  "PT Serif",
+                  "PT Serif",
+                  "PT Serif",
+                  "PT Serif"
+                ]
+              },
+              "cart": {
+                "contents": {
+                  "button": true
+                },
+                "styles": {
+                  "button": {
+                    "background-color": "#000000",
+                    "font-family": "PT Serif, serif",
+                    ":hover": {
+                      "background-color": "#000000"
+                    },
+                    "border-radius": "0px",
+                    ":focus": {
+                      "background-color": "#000000"
+                    },
+                    "font-weight": "normal"
+                  },
+                  "footer": {
+                    "background-color": "#ffffff"
+                  }
+                },
+                "googleFonts": [
+                  "PT Serif"
+                ]
+              },
+              "modalProduct": {
+                "contents": {
+                  "img": false,
+                  "imgWithCarousel": true,
+                  "variantTitle": false,
+                  "buttonWithQuantity": true,
+                  "button": false,
+                  "quantity": false
+                },
+                "styles": {
+                  "product": {
+                    "@media (min-width: 601px)": {
+                      "max-width": "100%",
+                      "margin-left": "0px",
+                      "margin-bottom": "0px"
+                    }
+                  },
+                  "button": {
+                    "background-color": "#000000",
+                    "font-family": "PT Serif, serif",
+                    ":hover": {
+                      "background-color": "#000000"
+                    },
+                    "border-radius": "0px",
+                    ":focus": {
+                      "background-color": "#000000"
+                    },
+                    "font-weight": "normal"
+                  },
+                  "variantTitle": {
+                    "font-family": "PT Serif, serif",
+                    "font-weight": "normal"
+                  },
+                  "title": {
+                    "font-family": "PT Serif, serif"
+                  },
+                  "description": {
+                    "font-family": "PT Serif, serif",
+                    "font-weight": "normal"
+                  },
+                  "price": {
+                    "font-family": "PT Serif, serif",
+                    "font-weight": "normal"
+                  },
+                  "compareAt": {
+                    "font-family": "PT Serif, serif",
+                    "font-weight": "normal"
+                  }
+                },
+                "googleFonts": [
+                  "PT Serif",
+                  "PT Serif",
+                  "PT Serif",
+                  "PT Serif",
+                  "PT Serif",
+                  "PT Serif"
+                ]
+              },
+              "toggle": {
+                "styles": {
+                  "toggle": {
+                    "font-family": "PT Serif, serif",
+                    "background-color": "#000000",
+                    ":hover": {
+                      "background-color": "#000000"
+                    },
+                    ":focus": {
+                      "background-color": "#000000"
+                    },
+                    "font-weight": "normal"
+                  }
+                },
+                "googleFonts": [
+                  "PT Serif"
+                ]
+              },
+              "option": {
+                "styles": {
+                  "label": {
+                    "font-family": "PT Serif, serif"
+                  },
+                  "select": {
+                    "font-family": "PT Serif, serif"
+                  }
+                },
+                "googleFonts": [
+                  "PT Serif",
+                  "PT Serif"
+                ]
+              },
+              "productSet": {
+                "styles": {
+                  "products": {
+                    "@media (min-width: 601px)": {
+                      "margin-left": "-20px"
+                    }
+                  }
+                }
+              }
+            }
+          });
+        });
+      }
+    })();
+    /*]]>*/
+  </script>
+
 </div>
 
 
