@@ -1,16 +1,6 @@
 
 $(function () {
 
-    var handler = StripeCheckout.configure({
-        key: 'pk_live_aqqrWSGqwzp5AH0IkoKypeb2',
-        image: '/assets/img/star-white.jpg',
-        locale: 'auto',
-        token: function (token) {
-            // You can access the token ID with `token.id`.
-            // Get the token ID to your server-side code for use.
-        }
-    });
-
     var description = "Origami Christmas Stars"
     var qty = 1
     var amount = 300
@@ -40,23 +30,6 @@ $(function () {
 
     });
 
-    document.getElementById('customButton').addEventListener('click', function (e) {
-
-        // Open Checkout with further options:
-        handler.open({
-            name: 'Oxigami',
-            description: description_text,
-            amount: total,
-            shippingAddress: true
-            
-        });
-        e.preventDefault();
-    });
-
-    // Close Checkout on page navigation:
-    window.addEventListener('popstate', function () {
-        handler.close();
-    });
 
     $('input[type="number"]').val(qty);
     $('input[type="number"]').trigger("change");
