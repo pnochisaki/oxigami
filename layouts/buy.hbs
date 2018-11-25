@@ -3,7 +3,7 @@
 <script src="https://checkout.stripe.com/checkout.js"></script>
 
 
-<div class="product">
+{{!-- <div class="product">
   <div>
     <img src="/assets/img/star-white.jpg" alt="">
   </div>
@@ -13,8 +13,39 @@
     
     <button id="customButton">Purchase for <span>$<span id="price"></span></span></button>
   </div>
-</div>
+</div> --}}
 
 
+<!-- Load Stripe.js on your website. -->
+<script src="https://js.stripe.com/v3"></script>
+
+<!-- Create a button that your customers click to complete their purchase. -->
+<button id="checkout-button">Pay</button>
+<div id="error-message"></div>
+
+<script>
+  var stripe = Stripe('pk_live_aqqrWSGqwzp5AH0IkoKypeb2', {
+    betas: ['checkout_beta_3']
+  });
+
+  var checkoutButton = document.getElementById('checkout-button');
+  checkoutButton.addEventListener('click', function () {
+    // When the customer clicks on the button, redirect
+    // them to Checkout.
+    stripe.redirectToCheckout({
+      items: [{sku: 'sku_E1wWCfH6MOzzWh', quantity: 1}],
+      successUrl: 'https://pnochisaki.github.io//success',
+      cancelUrl: 'https://pnochisaki.github.io//canceled',
+    })
+    .then(function (result) {
+      if (result.error) {
+        // If `redirectToCheckout` fails due to a browser or network
+        // error, display the localized error message to your customer.
+        var displayError = document.getElementById('error-message');
+        displayError.textContent = result.error.message;
+      }
+    });
+  });
+</script>
 
 {{> footer}}
