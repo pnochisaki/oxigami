@@ -48,28 +48,7 @@ header, footer {
 .product {
     text-align: center;
 }
-@media (min-width: 769px) {
-    .logo img {
-        width: 75%;
-    }
-    .product {
-        text-align: left;
-    }
-   .product > div {
-        float: left;
-        width: 50%;
-        padding-right: 1rem;
-    }
-    .product:after {
-        content:" ";
-        display: block;
-        clear: both;
-    }
-    input[type='number'] {
-        margin: 0;
-        display: inline-block;
-    }
-    body {
-        font-size: 2rem;
-    }
+.product > div {
+    margin: 0 auto 4rem;
 }
+
