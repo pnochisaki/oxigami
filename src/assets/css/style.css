@@ -11,11 +11,9 @@ body {
 }
 header, footer {
     text-align: center;
-    padding: 2rem 0
-}
-header {
     padding: 1rem 0 0;
 }
+
 img {
     width: 100%;
     height: auto;
@@ -52,6 +50,16 @@ input[type='number'] {
 }
 .product > div {
     margin: 0 auto 4rem;
+}
+
+.sharing {
+    text-align: center;
+    padding-bottom: 4rem
+}
+.sharing > div {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 0;
 }
 
 @media (min-width: 769px) {
