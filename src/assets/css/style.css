@@ -11,6 +11,10 @@ body {
 }
 header, footer {
     text-align: center;
+    padding: 2rem 0
+}
+header {
+    padding: 1rem 0 0;
 }
 img {
     width: 100%;
@@ -42,9 +46,7 @@ input[type='number'] {
     margin: 0 auto 2rem ;
 }
 
-header, footer {
-    padding: 2rem 0
-}
+
 .product {
     text-align: center;
 }
@@ -52,3 +54,14 @@ header, footer {
     margin: 0 auto 4rem;
 }
 
+@media (min-width: 769px) {
+    .logo img {
+        width: 75%;
+    }
+    .product {
+        text-align: left;
+    }
+    body {
+        font-size: 2rem;
+    }
+}
